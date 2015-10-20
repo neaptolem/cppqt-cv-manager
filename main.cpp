@@ -10,6 +10,7 @@
 //      * list of skills
 //      * list of previous jobs
 //      * we would like to print our CV
+
 class JobRecord
 {
 public:
@@ -28,13 +29,14 @@ public:
     }
 
     void print() const
-        {
+    {
             if (isValid())
                 std::cout << "(" << mStartYear << " - " << mEndYear << ")"
                 << std::endl << "Title: " << mJobTitle
                 << std::endl << "Name of the Company: " << mCompanyName
                 << std::endl << std::endl;
-        }
+    }
+
 private:
     int mStartYear;
     int mEndYear;
@@ -51,9 +53,8 @@ public:
       , mBirthYear{birthYear}
       , mSkills{skills}
       , mPreviousJobs{previousJobs}
-    {
+    {}
 
-    }
     CV(const std::string &name, int birthYear, const std::string &skills) :
         mName{name}
       , mBirthYear{birthYear}
